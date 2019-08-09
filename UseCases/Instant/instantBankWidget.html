@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bressa Merchant</title>
+    <script src="js/script.js"></script>
+    <script src="https://sandbox.paywithmybank.com/start/scripts/paywithmybank.js?accessId=cev95HZaVSmke96tPdpp"></script>
+</head>
+<body>
+    <div>USE CASE: Instant (Establish)</div>
+    <br>
+    <div><a type="submit" id="btnInstant" value="Instant">Instant</a></div>
+    <br><br>
+    <div>USE CASE: Instant (Select Bank Widget)</div>
+    <br>
+    <div id="widget-container-id"></div>
+    <br>
+    <script>
+        PayWithMyBank.selectBankWidget(establishData, PayWithMyBankOptions);
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      var PayWithMyBankOptions = {
+        closeButton: false,
+        dragAndDrop: true,
+        widgetContainerId: 'widget',
+      };
+    </script>
+    <script src="https://sandbox.paywithmybank.com/start/scripts/paywithmybank.js?accessId=cev95HZaVSmke96tPdpp"></script>
+  </head>
+  <body style="margin: 0;" id="widget">
+  </body>
+   <script>
+    var establishData = {
+      accessId: 'cev95HZaVSmke96tPdpp',
+      merchantId: '100000008',
+      merchantReference: '123123123456789',
+      description: 'Order',
+      paymentType: 'Disbursement',
+      metadata: { lang: 'en' },
+      returnUrl: 'http://localhost/return',
+      cancelUrl: 'http://localhost/cancel',
+    };
+    PayWithMyBank.establish(establishData, PayWithMyBankOptions);
+  </script>
+</html>

@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      var PayWithMyBankOptions = {
+        closeButton: false,
+        dragAndDrop: true,
+        widgetContainerId: 'widget',
+      };
+    </script>
+    <script src="https://sandbox.paywithmybank.com/start/scripts/paywithmybank.js?accessId=M8RaHgEjBE54zuFYMRQq"></script>
+  </head>
+  <body style="margin: 0;" id="widget">
+  </body>
+   <script>
+    var establishData = {
+      accessId: 'M8RaHgEjBE54zuFYMRQq',
+      merchantId: '1002463580',
+      merchantReference: '123123123456789',
+      description: 'Order',
+      paymentType: 'Verification',
+	  customer: {
+		name: 'Joh44n Jones'
+	  },
+      verification: {
+        verifyCustomer: true
+      },
+      account: {
+        type: 1,
+        accountNumber: '1234565700',
+        routingNumber: '124003116',
+      },
+      metadata: { lang: 'en' },
+      returnUrl: 'http://localhost/return',
+      cancelUrl: 'http://localhost/cancel',
+    };
+    PayWithMyBank.establish(establishData, PayWithMyBankOptions);
+  </script>
+</html>
